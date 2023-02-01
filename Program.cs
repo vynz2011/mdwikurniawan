@@ -1,18 +1,10 @@
-﻿using v21;
+﻿using App;
 
-Kalkulator hitung = new Kalkulator();
-
-//hitung.tambah();
-//hitung.kurang();
-
-Console.Write("masukkan panjang : ");
-int p = Convert.ToInt32(Console.ReadLine());
-Console.Write("masukkan lebar : ");
-int l = Convert.ToInt32(Console.ReadLine());
+Rumus.tampil();
 
 Rumus rumus = new Rumus();
-int luas = rumus.persegiPanjang(p,l);
-
-Console.WriteLine($"luas persegi panjang dengan P = {p} dan L= {l} adalah {luas}");
-
-
+Console.Write("masukkan jari - jari : ");   
+int r = Convert.ToInt16(Console.ReadLine());
+rumus.set(r);
+Console.Write($"luas lingkaran dengan r : {r} adalah : ");
+rumus.get();
